@@ -146,6 +146,7 @@ h1{
 .social-handles li a:link,
 .social-handles li a:visited{
     text-decoration: none;
+    color:#595853;
     transition: font-size 0.2s, color 0.2s;
 }
 .social-handles li a:hover,
