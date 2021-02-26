@@ -22,7 +22,7 @@ html{
     background-repeat: no-repeat;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
-/*    overflow-y: hidden;*/
+    overflow-y: hidden;
 }
 main{
     display: flex;
