@@ -1,7 +1,8 @@
-/**/
+/*CSS code*/
 *{
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 body,
@@ -22,12 +23,21 @@ html{
     background-repeat: no-repeat;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: scroll;
 }
+/*Main section*/
 main{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: start;
     align-content: flex-start;
     background: rgba(0,0,0, 0.2); 
     -webkit-backdrop-filter: blur(200px); 
@@ -37,7 +47,7 @@ main{
     overflow-y: scroll;
     z-index: 1;
 }
-
+/*Calculator container*/
 .block{
     background-color: rgba(255,255,255,0.5);
     left: 0;
@@ -48,10 +58,17 @@ main{
     border-radius: 10px;
     margin:100px auto 70px auto;
 }
+/*Result box*/
 .result{
     background-color: rgba(255,255,255,0.6);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: flex-end;
     margin: 15px auto;
     font-size: 170%;
@@ -59,6 +76,7 @@ main{
     height: 25%;
     border-radius: 5px;
 }
+/*Control Box*/
 .controls{
     width: 97%;
     height: 65%;
@@ -70,11 +88,14 @@ main{
     align-self: center;
     margin: auto;
 }
+/*Button styles*/
 button{
     border: none;
     outline:none;
     border-radius: 10px;
+    -webkit-box-shadow: 2px 3px 5px 3px #7e7e7e;
     box-shadow: 2px 3px 5px 3px #7e7e7e;
+    -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
 }
 button:hover,
@@ -84,12 +105,14 @@ button:active{
 .big-but-1{
     color: #fff;
     background-color: #393939;
+    -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
 }
 .big-but-2{
     grid-column: 3/5;
     color: #fff;
     background-color: #00d900;
+    -webkit-transition: background-color 0.2s;
     transition: background-color 0.2s;
 }
 .big-but-1:hover,
@@ -114,12 +137,21 @@ button:active{
 .del ion-icon{
     margin-top: 5px;
 }
+/*Profile and links*/
 .profile{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 .details{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
 }
 .photo{
@@ -127,6 +159,7 @@ button:active{
     height: 50px;
     border-radius: 50%;
     border: solid 2px #000;
+    -webkit-transition: width 0.2s,height 0.2s;
     transition: width 0.2s,height 0.2s;
 }
 h1{
@@ -136,6 +169,8 @@ h1{
     margin-left: 15px;
 }
 .social-handles ul{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 8px 0 0 250px;
 }
@@ -145,8 +180,9 @@ h1{
 }
 .social-handles li a:link,
 .social-handles li a:visited{
+    color: rgba(21, 21, 21, 0.6);
     text-decoration: none;
-    color:#595853;
+    -webkit-transition: font-size 0.2s, color 0.2s;
     transition: font-size 0.2s, color 0.2s;
 }
 .social-handles li a:hover,
@@ -169,9 +205,11 @@ h1{
 .instagram:active{
    color: #bc2a8d;;
 }
+/*Animations*/
 .animate__animated.animate__zoomIn {
   --animate-duration: 1s;
 }
+/*Calc icon*/
 .calc-icon{color:#fff;
     font-size: 150%;
     margin: 250px 0 100px 0;}
