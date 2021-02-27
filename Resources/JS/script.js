@@ -1,5 +1,8 @@
+//Calculator working backend code:
+
 'use strict';
-//key selection
+
+//Key selection:
 const clr=document.querySelector('.clr');
 const del=document.querySelector('.del');
 const hide=document.querySelector('.hide');
@@ -21,11 +24,14 @@ const eight=document.querySelector('.eight');
 const nine=document.querySelector('.nine');
 const ansd=document.getElementById('ansd');
 const clcbut=document.querySelector('.calc-icon');
+
+//Variable declerations:
 let display="";
 let answer="";
 let num="";
 let opr=0;
 
+//Calc Function:
 function calc(opr){
    switch(opr){
        case 0: answer=parseFloat(num);num="";break; 
@@ -37,6 +43,9 @@ function calc(opr){
    };
 }
 
+//Button click actions:
+
+//Numbers and decimal point click actions:
 zero.addEventListener('click',function(){
     ansd.textContent=display+="0";
     num+="0";
@@ -92,6 +101,7 @@ deci.addEventListener('click',function(){
     num+=".";
 });
 
+//Clear button click action:
 clr.addEventListener('click',function(){
     ansd.textContent=display='0';
     answer="";
@@ -100,12 +110,13 @@ clr.addEventListener('click',function(){
     opr=0;
 });
 
+//Addition button click action:
 add.addEventListener('click',function(){
     ansd.textContent=display+='+';
     calc(opr);
     opr=1;
 });
-
+//Subtraction button click action:
 sub.addEventListener('click',function(){
     ansd.textContent=display+='-';    
     if(opr!=5 && opr!=0)
@@ -115,12 +126,14 @@ sub.addEventListener('click',function(){
         opr=2;}
 });
 
+//Multiplication button click action:
 mul.addEventListener('click',function(){
     ansd.textContent=display+='*';
     calc(opr);
     opr=3;
 });
-    
+
+//Division button click action:
 div.addEventListener('click',function(){
     ansd.textContent=display+='/';
     calc(opr);
@@ -128,6 +141,7 @@ div.addEventListener('click',function(){
     opr=4;
 });
 
+//Equal's to button click action:
 ans.addEventListener('click',function(){
     calc(opr);
     ansd.textContent=answer;
@@ -135,16 +149,20 @@ ans.addEventListener('click',function(){
     opr=5;
 });
 
+//Hide button click action:
 hide.addEventListener('click',function(){
     document.querySelector('.block').classList.add('hidden');
     document.querySelector('.calc-icon').classList.remove('hidden');
 });
+
+//Delete button click action:
 del.addEventListener('click',function(){
     display=display.slice(0,-1);
     num=num.slice(0,-1);
     ansd.textContent=display;
 });
 
+//Calc-button click action:
 clcbut.addEventListener('click',function(){
     document.querySelector('.block').classList.remove('hidden');
     document.querySelector('.block').classList.add('animate__animated');
