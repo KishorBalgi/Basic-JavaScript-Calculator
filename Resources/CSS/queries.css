@@ -1,35 +1,40 @@
-
+/*Media queries for multiple screen sizes*/
+/*For screen width less or equal to than 1080px*/
 @media only screen and (max-width: 1080px){
     body,
     html{font-size: 25px;}
     
     .social-handles ul{margin-left: 100px;}
 }
+
+/*For screen width less or equal to than 950px*/
 @media only screen and (max-width: 950px){
     .block{height: 380px;}
 }
 
+/*For screen width less or equal to than 800px*/
 @media only screen and (max-width: 800px){
     body,
     html{font-size: 20px;}
     
-    .social-handles{padding-bottom: 40px;}
+    .social-handles{padding-bottom: 60px;}
     
-    .social-handles ul{margin-left: 0px;width: 200px; justify-content: space-between;}
+    .social-handles ul{margin-left: 0px;width: 200px; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between;}
     
     .social-handles ul li{margin-left: 0px;}
     
     .photo{width: 65px; height: 65px;}
     
-    .profile{flex-direction: column;align-items: center; font-size: 140%;margin-bottom: 40px;}
+    .profile{-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-align: center;-ms-flex-align: center;align-items: center; font-size: 140%;}
     
     h1{margin-left: 0px;}
     
-    .details{flex-direction: column;align-items: center; margin-bottom: 40px;}
+    .details{-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-align: center;-ms-flex-align: center;align-items: center; margin-bottom: 40px;}
     
     .calc-icon{font-size: 250%;}
 }
 
+/*For screen width less or equal to than 600px*/
 @media only screen and (max-width: 600px){
     .block{width:80%;}
 }
