@@ -9,7 +9,7 @@
 
 /*For screen width less or equal to than 950px*/
 @media only screen and (max-width: 950px){
-    .block{height: 380px;}
+    .block{height: 400px;}
 }
 
 /*For screen width less or equal to than 800px*/
