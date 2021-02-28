@@ -30,11 +30,12 @@ let display="";
 let answer="";
 let num="";
 let opr=0;
+let click=0;
 
 //Calc Function:
 function calc(opr){
    switch(opr){
-       case 0: answer=parseFloat(num);num="";break; 
+       case 0: answer=parseFloat(num);num="";if(click===2){opr=2};break; 
        case 1: answer+=parseFloat(num);num="";opr=5;break;     
        case 2: answer-=parseFloat(num);num="";opr=5;break;     
        case 3: answer*=parseFloat(num);num="";opr=5;break;     
@@ -118,14 +119,10 @@ add.addEventListener('click',function(){
 });
 //Subtraction button click action:
 sub.addEventListener('click',function(){
-    ansd.textContent=display+='-';    
-    if(opr!=5 && opr!=0)
-        num+="-";
-    else{
-        calc(opr);
-        opr=2;}
+    ansd.textContent=display+='-';
+    calc(opr);
+    opr=2;
 });
-
 //Multiplication button click action:
 mul.addEventListener('click',function(){
     ansd.textContent=display+='*';
