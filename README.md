@@ -14,5 +14,5 @@ As this is project is among my first few projects, I was not able to build delet
 
 Project deploy link: [Link](https://kishorbalgi.github.io/Basic-JavaScript-Calculator/)
 
-#### Snaps
+#### Snap
 ![image](https://user-images.githubusercontent.com/75678927/152206879-d2da97c0-16fb-428e-95fa-ca82e5db1f36.png)
